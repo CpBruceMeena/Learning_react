@@ -17,11 +17,35 @@
 
     <script type="text/babel">
       class App extends React.Component{
+        state = {
+          name:'Sam',
+          age:30
+        }
+
+        handleClick = (e) => {
+          // console.log(e.target);
+          this.setState({
+            name = "Sammy"
+          })
+          console.log(this.state)
+        }
+
+        handleMouseOver = (e) => {
+          console.log(e.target, e.pageX);
+        }
+
+        handleOnCopy = (e) => {
+          console.log('Try being original for once!');
+        }
+
         render(){
           return (
           <div className="app-content">
             <h1>This is the starting of react.</h1>
-            <p>{ Math.random() * 10 }</p>
+            <p> My name is { this.state.name } and I'm { this.state.age }</p>
+            <button onClick={this.handleClick}>click me</button>
+            <button onMouseOver={this.handleMouseOver}>Hover me</button>
+            <p onCopy={this.handleOnCopy}>What we think we become</p>
           </div>
           )
         }
