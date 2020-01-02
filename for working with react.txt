@@ -1,0 +1,5 @@
+try npm cache clean --force then run npm install -g create-react-app@latest
+
+after this 
+
+npx create-react-app myapp
