@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Ninjas = ({ninjas}) => {
+const Ninjas = ({ninjas, deleteNinja}) => {
     // console.log(this.props);
     // Here we are destructuring the class, basically we are using variables to store the values
     const NinjaList = ninjas.map(ninja=>{
@@ -9,6 +9,7 @@ const Ninjas = ({ninjas}) => {
           <div> Name: { ninja.name } </div>
           <div> Age: { ninja.age } </div>
           <div> Cate: { ninja.belt } </div>
+          <button onClick={()=>{deleteNinja(ninja.id)}}>Delete</button>
         </div>
       )
     })
