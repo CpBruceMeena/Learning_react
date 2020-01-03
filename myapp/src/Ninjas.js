@@ -8,7 +8,7 @@ const Ninjas = ({ninjas}) => {
         <div className="ninja" key={ninja.id}>
           <div> Name: { ninja.name } </div>
           <div> Age: { ninja.age } </div>
-          <div> Cate: { ninja.Cate } </div>
+          <div> Cate: { ninja.belt } </div>
         </div>
       )
     })
